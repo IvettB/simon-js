@@ -5,13 +5,26 @@ const btnDescriptions = [
   { file: 'sound4.mp3', hue: 240 },
 ];
 
-class Button {
+/*class Button {
   constructor(description, el) {
     this.el = el;
     this.hue = description.hue;
     this.sound = loadSound(description.file);
     this.paint(25);
-  }
+  }*/
+
+  class Button {
+    constructor(description, el) {
+      this.el = el;
+      this.hue = description.hue;
+      this.sound = loadSound(description.file);
+      this.paint(25);
+    }
+
+  /*paint(level) {
+    const background = `hsl(${this.hue}, 100%, ${level}%)`;
+    this.el.style.backgroundColor = background;
+  }*/
 
   paint(level) {
     const background = `hsl(${this.hue}, 100%, ${level}%)`;
@@ -79,6 +92,17 @@ class Game {
       }
     }
   }
+
+  /*async reset() {
+    this.allowPlayer = false;
+    this.playerPlaybackPos = 0;
+    this.sequence = [];
+    this.updateScore('--');
+    await this.buttonDance(1);
+    this.addButton();
+    await this.playSequence();
+    this.allowPlayer = true;
+  }*/
 
   async reset() {
     this.allowPlayer = false;
