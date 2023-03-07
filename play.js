@@ -115,6 +115,10 @@ class Game {
     this.allowPlayer = true;
   }
 
+  /*getPlayerName() {
+    return localStorage.getItem('userName') ?? 'Mystery player';
+  }*/
+
   getPlayerName() {
     return localStorage.getItem('userName') ?? 'Mystery player';
   }
@@ -127,10 +131,20 @@ class Game {
     }
   }
 
+  /*addButton() {
+    const btn = this.getRandomButton();
+    this.sequence.push(btn);
+  }*/
+
   addButton() {
     const btn = this.getRandomButton();
     this.sequence.push(btn);
   }
+
+  /*updateScore(score) {
+    const scoreEl = document.querySelector('#score');
+    scoreEl.textContent = score;
+  }*/
 
   updateScore(score) {
     const scoreEl = document.querySelector('#score');
